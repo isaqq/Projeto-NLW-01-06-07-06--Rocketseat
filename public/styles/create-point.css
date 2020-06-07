@@ -1,0 +1,222 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    /*alinhamento de caixa (pelo lado de fora)*/
+    margin: 0 auto;/*0 para cima e baica e auto para direira e esquerda. auto coloca um espacinho*/
+}
+
+#page-create-point header {
+    margin-top: 48px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a{ 
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+}
+
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');/*svg precisa de altura e largura*/
+
+    display: flex;/*coloca as coisas uma do lado da outra*/
+
+    width: 20px;
+    height: 24px;
+
+}
+
+form {
+    background-color: white;
+
+    margin: 80px auto;
+    padding: 64px;/*preenchimento*/
+
+    border-radius: 8px;
+    
+    max-width: 730px;
+}
+
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form legend span{
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 24px;
+
+}
+
+form .field-group{
+    display: flex;
+
+}
+
+form input,
+form select{
+    background-color: var(--bg-color);
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+
+    border-radius: 8px;
+
+    outline: none;/*linha preta que fica em volta do input*/
+}
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+/*esse + serve para pegar o field qiue esta sendo seguido por um field, ou seja, o segundo*/
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+
+    margin-top: 40px;
+    justify-content: center;
+    transition: background-color, transform 400ms;
+    
+}
+
+form button:hover{
+    background-color: #2fb86e;
+    transform: translateY(-10px);
+}
+
+
+.itens-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+
+
+}
+
+.itens-grid li{
+    background-color: #f5f5f5;
+    list-style: none;
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.itens-grid li span{
+    margin-top: 12px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+
+}
+
+.itens-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.itens-grid li img,
+.itens-grid li span{
+    pointer-events: none;
+}
+
+.itens-grid li:hover{
+    background: #dddddd;
+    
+    transition: 400ms;
+    transform: scale(0.94);
+    filter: drop-shadow(5px 9px 4px rgba(0,0,0,.5));
+}
+
+#page-create-point header a:active span{
+    margin-right: 32px;
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

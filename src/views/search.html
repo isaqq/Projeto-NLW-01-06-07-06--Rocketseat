@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Resultado da pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <main>
+    {% if total > 0 %}
+        <h4>
+            <strong>{{total}} pontos</strong>
+            encontrados
+        </h4>
+
+        <div class="cards">
+
+
+            <!--esse segundo place ai, tem que ser o mesmo nome do que usado la no server.js, no caso ta falando "para cada lugar(campo, espaço) dentro de lugar(place la do server)"-->
+            {% for place in place %}
+                <div class="card">
+                    <!--essa variavel ai pega o place (primeiro ali do for, pega o espaço) que temos dentro do place(la do bd) e procura o image dentro dele-->
+                    <img src="{{ place.image }}" alt="{{ place.name }}">
+                    <h1>{{ place.name }}</h1>
+                    <h3>{{ place.items }} </h3>
+                    <p>
+                        {{ place.city }}, {{ place.state }}
+                        <br/>
+                        {{ place.address }}
+                        <br/>
+                        N° {{ place.a2 }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+    {%else%}
+
+        <h4><strong>Nenhum</strong> local cadastrado :/</h4>
+
+    {% endif %}
+
+    </main>
+{% endblock content %}

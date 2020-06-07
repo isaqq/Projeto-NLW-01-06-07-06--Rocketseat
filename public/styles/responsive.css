@@ -1,0 +1,100 @@
+@media (max-width: 900px){
+    #page-home {
+        background-position-x: 70vw;
+    }
+
+    #page-home .content{
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a{
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+
+    #page-home main {
+        align-items: center;
+
+    }
+
+    #page-search-results .cards{
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img{
+        height: 200px;
+    }
+
+    #page-create-point .field-group{
+        flex-direction: column;
+    }
+
+    #page-create-point .field-group .field + .field{
+        margin-left: 0;
+    }
+
+    
+
+}
+
+@media (min-width: 1700px){
+    #page-home {
+        background-position-x: 40vw;
+    }
+}
+
+@media (max-height: 760px){
+    #page-home {
+        background-position-y: 200px;
+    }
+}
+
+@media (max-width: 600px){
+    #page-create-point .itens-grid{
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (max-width: 400px){
+    #page-create-point legend{
+        display: block;
+        justify-content: none;
+        text-align: center;
+    }
+
+    #page-create-point legend h2 + span{
+        margin-top: 10px;
+        display: block;
+        justify-content: none;
+        text-align: center;
+    }
+
+    #page-create-point h1{
+        text-align: center;
+    }
+
+    #page-create-point form button{
+        display: block;
+        
+        align-items: center;
+        justify-content: center;
+        margin: 40px auto;
+        width: 60%;
+        
+        
+        
+        
+       
+        
+    }
+
+    
+
+}
